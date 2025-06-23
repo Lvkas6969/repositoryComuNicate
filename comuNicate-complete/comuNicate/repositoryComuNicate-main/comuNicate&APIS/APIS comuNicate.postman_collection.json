@@ -1,0 +1,778 @@
+{
+	"info": {
+		"_postman_id": "171fcc32-f230-4c95-81f0-5cfb8b6882fe",
+		"name": "APIS comuNicate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44164844",
+		"_collection_link": "https://veronica-4222913.postman.co/workspace/Veronica's-Workspace~db6cd738-db18-4372-876e-b4d458f388ae/collection/44164844-171fcc32-f230-4c95-81f0-5cfb8b6882fe?action=share&source=collection_link&creator=44164844"
+	},
+	"item": [
+		{
+			"name": "API Regiones",
+			"item": [
+				{
+					"name": "PATCH Region",
+					"item": [
+						{
+							"name": "Nombre",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"nombreRegion\": \"Region Metropolitana de Santiago\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/regiones/id/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET Regiones",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "localhost:8080/api/v1/regiones"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Region By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRegion\": \"Region Metropolitana\"\r\n}"
+						},
+						"url": "localhost:8080/api/v1/regiones/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Region By Nombre",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRegion\": \"Region Metropolitana\"\r\n}"
+						},
+						"url": "localhost:8080/api/v1/regiones/nombre/Region Metropolitana"
+					},
+					"response": []
+				},
+				{
+					"name": "POST Region",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRegion\": \"Valparaiso\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/regiones"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Region",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nombreRegion\": \"Region Metropolitana de Santiago\"\r\n}"
+						},
+						"url": "localhost:8080/api/v1/regiones/id/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Comunas",
+			"item": [
+				{
+					"name": "PATCH Comuna",
+					"item": [
+						{
+							"name": "FKRegion",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"fkRegion\": {\r\n    \"idRegion\": 2\r\n   }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/comunas/id/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Nombre",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"nombreComuna\": \"Calera de Tango pero en Valparaiso\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/comunas/id/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET Comunas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "localhost:8080/api/v1/comunas"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Comuna By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRegion\": \"Region Metropolitana\"\r\n}"
+						},
+						"url": "localhost:8080/api/v1/regiones/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Comuna By Nombre",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRegion\": \"Region Metropolitana\"\r\n}"
+						},
+						"url": "localhost:8080/api/v1/comunas/nombre/Calera de Tango"
+					},
+					"response": []
+				},
+				{
+					"name": "POST Comuna",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreComuna\": \"Cerrillos\",\r\n    \"fkRegion\": {\r\n        \"idRegion\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/comunas"
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Comuna",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idComuna\": 1,\r\n    \"nombreComuna\": \"Calera de Tango\",\r\n    \"fkRegion\": {\r\n        \"idRegion\": 1\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/comunas/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Region Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"nombreRegion\": \"Region Metropolitana de Santiago\"\r\n}"
+						},
+						"url": "localhost:8080/api/v1/comunas/id/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Usuarios",
+			"item": [
+				{
+					"name": "PATCH Usuario",
+					"item": [
+						{
+							"name": "Nombre",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idUsuario\":2,\r\n    \"nombreUsuario\":\"Terminator3000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/usuarios/id/2"
+							},
+							"response": []
+						},
+						{
+							"name": "Fecha",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idUsuario\":2,\r\n    \"fechaUsuario\":\"2001-05-02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/usuarios/id/2"
+							},
+							"response": []
+						},
+						{
+							"name": "Correo",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idUsuario\":2,\r\n    \"correoUsuario\":\"Terminator3000@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/usuarios/id/2"
+							},
+							"response": []
+						},
+						{
+							"name": "FKComuna",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idUsurio\":2,\r\n    \"fkComuna\":{\r\n        \"idComuna\":3\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/usuarios/id/2"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET Usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreComuna\": \"Cerrillos\",\r\n    \"fkRegion\": {\r\n        \"idRegion\": 1\r\n    }\r\n}"
+						},
+						"url": "localhost:8080/api/v1/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Usuarios By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreComuna\": \"Cerrillos\",\r\n    \"fkRegion\": {\r\n        \"idRegion\": 1\r\n    }\r\n}"
+						},
+						"url": "localhost:8080/api/v1/usuarios/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "POST Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreUsuario\": \"PanConQueso\",\r\n    \"fechaUsuario\": \"2025-05-16\",\r\n    \"correoUsuario\": \"panconqueso123123a@gmail.com\",\r\n    \"fkComuna\": {\r\n        \"idComuna\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"idUsuario\": 1,\r\n    \"nombreUsuario\": \"MatadeCereza2000\",\r\n    \"fechaUsuario\": \"2024-05-16\",\r\n    \"correoUsuario\": \"matadecereza@gmail.com\",\r\n    \"fkComuna\": {\r\n        \"idComuna\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/usuarios/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/v1/usuarios/id/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Tarjetas",
+			"item": [
+				{
+					"name": "PATCH Tarjeta",
+					"item": [
+						{
+							"name": "Nombre",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numeroPan\": 8989787867675656,\r\n    \"nombreTarjeta\": \"VISA PREMIUM\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/tarjetas/id/8989787867675656"
+							},
+							"response": []
+						},
+						{
+							"name": "NombreTitular",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numeroPan\": 1234567812345678,\r\n    \"nombreTitular\": \"Juan Tapia\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/tarjetas/id/1234567812345678"
+							},
+							"response": []
+						},
+						{
+							"name": "FechaVencimiento",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numeroPan\": 1234567812345678,\r\n    \"nombreTitular\": \"Jaimito Perez\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/tarjetas/id/1234567812345678"
+							},
+							"response": []
+						},
+						{
+							"name": "CodigoVerificador",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numeroPan\": 1234567812345678,\r\n    \"nombreTitular\": \"Jaimito Perez\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/tarjetas/id/1234567812345678"
+							},
+							"response": []
+						},
+						{
+							"name": "FKUsuario",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"numeroPan\": 8989787867675656,\r\n    \"fkUsuario\":{\r\n        \"idUsuario\":3\r\n    }\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/tarjetas/id/8989787867675656"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET Tarjetas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreComuna\": \"Cerrillos\",\r\n    \"fkRegion\": {\r\n        \"idRegion\": 1\r\n    }\r\n}"
+						},
+						"url": "localhost:8080/api/v1/tarjetas"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Tarjeta By PAN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreComuna\": \"Cerrillos\",\r\n    \"fkRegion\": {\r\n        \"idRegion\": 1\r\n    }\r\n}"
+						},
+						"url": "localhost:8080/api/v1/tarjetas/1234567890123456"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Tarjetas By IDUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/v1/tarjetas/idUser/2"
+					},
+					"response": []
+				},
+				{
+					"name": "POST Tarjeta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroPan\": 8989787867675656,\r\n  \"nombreTarjeta\": \"VISA Platinum\",\r\n  \"nombreTitular\": \"Jaimito Perez\",\r\n  \"fechaVencimientoTarjeta\": \"2026-12-31\",\r\n  \"codigoVerificadorTarjeta\": 123,\r\n  \"fkUsuario\": {\r\n    \"idUsuario\": 2\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/tarjetas"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Tarjeta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroPan\": 1234567812345678,\r\n    \"nombreTarjeta\": \"VISA Platinum\",\r\n    \"nombreTitular\": \"María Pérez\",\r\n    \"fechaVencimientoTarjeta\": \"2026-12-31T00:00:00.000+00:00\",\r\n    \"codigoVerificadorTarjeta\": 567,\r\n    \"fkUsuario\": {\r\n        \"idUsuario\": 2\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/tarjetas/id/1234567812345678"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/v1/tarjetas/id/1234567812345678"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Publicaciones",
+			"item": [
+				{
+					"name": "PATCH Publicacion",
+					"item": [
+						{
+							"name": "Descripcion",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idPublicacion\": 4,\r\n    \"descripcionPublicacion\": \"El semaforo exploto\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/publicaciones/id/4"
+							},
+							"response": []
+						},
+						{
+							"name": "FechaHora",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idPublicacion\": 4,\r\n    \"fechaHoraPublicacion\": \"2025-06-17T15:45:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/publicaciones/id/4"
+							},
+							"response": []
+						},
+						{
+							"name": "Longitud",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idPublicacion\": 4,\r\n    \"ubicacionLongitudPublicacion\":-180\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/publicaciones/id/4"
+							},
+							"response": []
+						},
+						{
+							"name": "Latitud",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idPublicacion\": 4,\r\n    \"ubicacionLatitudPublicacion\":-100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/publicaciones/id/4"
+							},
+							"response": []
+						},
+						{
+							"name": "FKUsuario",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idPublicacion\": 4,\r\n    \"descripcionPublicacion\": \"El semaforo exploto\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8080/api/v1/publicaciones/id/4"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET Publicaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/v1/publicaciones"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Publicacion By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/v1/publicaciones/id/5"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Publicacion By IDUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/v1/publicaciones/idUser/3"
+					},
+					"response": []
+				},
+				{
+					"name": "POST Publicacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"descripcionPublicacion\": \"Un Haitiano va caminando tranquilamente por la calle\",\r\n  \"fechaHoraPublicacion\": \"2025-05-17T15:45:00\",\r\n  \"ubicacionLongitudPublicacion\": -70.655,\r\n  \"ubicacionLatitudPublicacion\": 90,\r\n  \"fkUsuario\": {\r\n    \"idUsuario\": 2\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/publicaciones"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Publicacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idPublicacion\": 8,\r\n  \"descripcionPublicacion\": \"Actualización: semáforo aún sin reparar\",\r\n  \"fechaHoraPublicacion\": \"2025-05-17T18:00:00\",\r\n  \"ubicacionLongitudPublicacion\": -70.655,\r\n  \"ubicacionLatitudPublicacion\": -12,\r\n  \"fkUsuario\": {\r\n    \"idUsuario\": 2\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/publicaciones/id/8"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Publicacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/v1/publicaciones/id/4"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
